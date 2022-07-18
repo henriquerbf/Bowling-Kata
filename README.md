@@ -1,30 +1,43 @@
 # Bowling-Kata
- 
+
 # Regras de boliche
--O jogo consiste em 10 partidas. Em cada partidas o jogador tem duas jogadas para derrubar 10 pinos. A pontuação para a partida é o número total de pinos derrubados, mais bônus por golpes e peças de reposição.
+-O jogo consiste em 10 rodadas. Em cada rodada o jogador tem duas jogadas para derrubar os pinos, no total são 10 pinos. A pontuação para a rodada é o número total de pinos derrubados, mais bônus por strikes e spares.
 
--Um spare é quando o jogador derruba todos os 10 pinos em duas jogadas. O **bônus** para esse quadro é o número de pinos derrubados pelo próximo lançamento.
+-Strike: quando todos os 10 pinos são derrubados na primeira jogada da rodada, neste caso não há segunda jogada e o jogador ganha um bônus igual ao valor de pontos das duas proximas jogadas.
 
--Um strike é ​​quando o jogador derruba todos os 10 pinos em sua primeira jogada. O frame é então completado com uma única jogada. O bônus para esse frame é o valor dos próximos dois lançamentos.
+-Spare: quando todos os 10 pinos são derrubados em duas jogadas, neste caso o jogador ganha um bônus igual ao valor da próxima jogada.
 
--No décimo frame, um jogador que rola um spare ou strike pode rolar as bolas extras para completar o frame. No entanto, não mais do que três bolas podem ser roladas no décimo quadro.
+-Na décima rodada, caso o jogador faça spare ou strike terá direito a mais uma jogada, sendo um total de 3 jogadas na ultima rodada.
 
+# Bônus Example
+Strike:
+    # Play
+    Frame 1, roll 1: 10 pins (strike)
+    Frame 2, roll 1: 10 pins (strike)
+    Frame 3, roll 1: 4 pins
+    Frame 3, roll 2: 2 pins
 
-**BONUS**
-A fórmula da CONTAGEM DE PONTOS NO BOLICHE tem as seguintes variáveis:
+    # Score
+    Frame 1: 10 + (10 + 4) = 24
+    Frame 2: 10 + (4 + 2) = 16
+    Frame 3: 4 + 2 = 6
+    TOTAL = 46
 
-Os pontos são a soma dos pinos derrubados.
-Exceto quando fizer Strike (derrubar 10 pinos na 1.ª bola)
-ou Spare (derrubar 10 pinos nas duas bolas jogadas)
-Se fizer Strike ganha bônus nas 2 bolas jogadas a seguir,
-Se fizer Spare ganha bônus na próxima bola jogada.
-O bônus é igual ao número de pinos derrubados.
-O total de 1 partida pode variar de zero a 300 pontos.
+Spare:
+    # Play
+    Frame 1, roll 1: 7 pins
+    Frame 1, roll 2: 3 pins (spare)
+    Frame 2, roll 1: 4 pins
+    Frame 2, roll 2: 2 pins
 
+    # Score
+    Frame 1: 7 + 3 + 4 (bonus) = 14
+    Frame 2: 4 + 2 = 6
+    TOTAL = 20
 
-
-Requisitos
+# Requisitos
 -Escreva uma classe Game que tenha dois métodos
 
 -void roll(int) é chamado cada vez que o jogador rola uma bola. O argumento é o número de pinos derrubados.
+
 -int score() retorna a pontuação total para aquele jogo.
