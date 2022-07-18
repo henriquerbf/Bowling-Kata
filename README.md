@@ -1,6 +1,6 @@
 # Bowling-Kata
  
-Regras de boliche
+# Regras de boliche
 -O jogo consiste em 10 partidas. Em cada partidas o jogador tem duas jogadas para derrubar 10 pinos. A pontuação para a partida é o número total de pinos derrubados, mais bônus por golpes e peças de reposição.
 
 -Um spare é quando o jogador derruba todos os 10 pinos em duas jogadas. O **bônus** para esse quadro é o número de pinos derrubados pelo próximo lançamento.
