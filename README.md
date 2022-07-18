@@ -7,7 +7,7 @@
 
 -Spare: quando todos os 10 pinos são derrubados em duas jogadas, neste caso o jogador ganha um bônus igual ao valor da próxima jogada.
 
--Na décima rodada, caso o jogador faça spare ou strike terá direito a mais uma jogada, sendo um total de 3 jogadas na ultima rodada.
+-Na décima rodada, caso o jogador faça spare terá direito a mais uma jogada, caso faça strike terá direito a mais duas jogadas, sendo um total de 3 jogadas na ultima rodada nestes casos.
 
 # Bônus Example
 Strike:
